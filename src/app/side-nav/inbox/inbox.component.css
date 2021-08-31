@@ -1,0 +1,16 @@
+.highlight {
+    color: blue;
+    cursor:pointer;
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+.row {
+    margin:0px;
+    height: 100%;
+   
+}
+.col-4, .col-8 {
+    padding: 0px;
+} 

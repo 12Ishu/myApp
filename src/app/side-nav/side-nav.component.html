@@ -1,0 +1,18 @@
+<mat-nav-list class="sidenav-list">
+    <a mat-list-item routerLink="/Compose"
+        style="color: white; background-color: skyblue; font-size: 2vw ; height: 10vw; margin-bottom: 10vw;">
+        <span class="offset-2">Compose</span>
+        <span class="col-1"></span>
+        <mat-icon>create</mat-icon>
+    </a>
+    <a mat-list-item style="color: white;font-size: 1.5vw; margin-bottom: 3vw;" *ngFor="let item of navListItems"
+        routerLink="/{{item}}">
+        <mat-icon *ngIf="item === 'inbox'">inbox</mat-icon>
+        <mat-icon *ngIf="item === 'sent'">send</mat-icon>
+        <mat-icon *ngIf="item === 'drafts'">drafts</mat-icon>
+        <mat-icon *ngIf="item === 'trash'">restore_from_trash</mat-icon>
+        <span class="col-8" style="margin-left:4%">{{ item | titlecase }}</span>
+        <span class="col-1" style="margin-left: 10%" *ngIf="item === 'inbox'">{{ noOfInboxItems }}</span>
+        <span class="col-1" style="margin-left: 10%" *ngIf="item !== 'inbox'">0</span>
+    </a>
+</mat-nav-list>
